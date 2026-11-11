@@ -1,22 +1,54 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-type="place" data-radius="soft" data-buttons="solid" data-motion>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jelajah Banjarmasin - Portal informasi wisata Kota Seribu Sungai. Temukan destinasi, kuliner, budaya, dan pesona wisata Banjarmasin.">
-    <title>Jelajah Banjarmasin - Temukan Pesona Kota Seribu Sungai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description"
+        content="Jelajah Banjarmasin: portal kurasi wisata Kota Seribu Sungai. Temukan pesona Pasar Terapung, susur sungai kelotok, kuliner Soto Banjar, dan wastra Sasirangan.">
+    <meta name="site-kind" content="other">
+    <meta name="page-type" content="place">
+    <meta name="page-kind" content="place">
+    <title>Jelajah Banjarmasin - Wisata Kota Seribu Sungai Kalimantan Selatan</title>
+
+    <!-- Distinctive Typography (Outfit Display + Plus Jakarta Sans Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Motion & Moments Readiness Scripts -->
+    <script>document.documentElement.classList.add('m-enter'); setTimeout(() => document.documentElement.classList.add('m-enter-done'), 700)</script>
+    <script>document.documentElement.classList.add('mo-js'); setTimeout(() => document.documentElement.classList.add('mo-safe'), 2500)</script>
+    <link rel="modulepreload" href="assets/moments/moments.js">
+    <link rel="modulepreload" href="assets/moments/lib.js">
+    <link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
 </head>
+
 <body>
 
-    <!-- HEADER & NAVIGATION -->
+    <!-- ACCESSIBILITY SKIP LINK -->
+    <a class="skip-link" href="#beranda">Lewati ke konten utama</a>
+
+    <!-- SITE HEADER & NAVIGATION -->
     <header class="site-header">
-        <div class="header-container">
+        <div class="wrap header-container">
             <div class="brand">
                 <a href="#beranda" class="brand-link">
-                    <h1 class="site-title">Jelajah Banjarmasin</h1>
+                    <img src="image/logo.png" alt="Logo Jelajah Banjarmasin" class="brand-logo" width="40" height="40">
+                    <span class="brand-text">
+                        <span class="site-title">Jelajah Banjarmasin</span>
+                        <span class="site-tagline">Temukan Pesona Kota Seribu Sungai</span>
+                    </span>
                 </a>
-                <p class="site-tagline">Temukan Pesona Kota Seribu Sungai</p>
             </div>
             <nav class="main-nav" aria-label="Navigasi Utama">
                 <ul class="nav-list">
@@ -24,279 +56,429 @@
                     <li><a href="#destinasi" class="nav-link">Destinasi</a></li>
                     <li><a href="#artikel" class="nav-link">Artikel</a></li>
                     <li><a href="#tentang" class="nav-link">Tentang</a></li>
-                    <li><a href="https://www.dicoding.com/users/muhammadzakaria/academies" target="_blank" rel="noopener noreferrer" class="nav-link dicoding-link">Profil Dicoding</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main id="beranda">
+    <main>
 
-        <!-- HERO SECTION -->
-        <section class="hero-section">
-            <div class="hero-card">
-                <div class="hero-image-wrapper">
-                    <img src="image/menara-pandang.jpeg" alt="Pemandangan Menara Pandang Siring Sungai Martapura Banjarmasin" class="hero-img">
-                    <div class="hero-overlay"></div>
-                </div>
+        <!-- 1. HERO SECTION (Fills Screen 1, Hard Facts on Screen, VARIANCE 6) -->
+        <section class="hero-section" id="beranda" data-enter aria-labelledby="hero-title">
+            <div class="wrap hero-grid">
                 <div class="hero-content">
-                    <span class="category-badge hero-badge">Landmark Kota</span>
-                    <h2 class="hero-title">Menara Pandang: Melihat Wajah Banjarmasin dari Ketinggian</h2>
+                    <span class="hero-kicker">Panduan Kurasi Wisata Sungai</span>
+                    <h1 id="hero-title" class="hero-title">Wisata Kota Seribu Sungai Banjarmasin</h1>
                     <p class="hero-description">
-                        Menara Pandang menghadirkan panorama Kota Banjarmasin, Sungai Martapura, dan aktivitas masyarakat dari sudut pandang yang berbeda. Nikmati keindahan kota seribu sungai dari ketinggian yang memukau.
+                        Menjelajahi denyut peradaban air di Kalimantan Selatan. Dari riak perahu kelotok di Pasar
+                        Terapung, panorama Siring Martapura, aroma rempah Soto Banjar, hingga motif wastra Kampung
+                        Sasirangan.
                     </p>
-                    <a href="artikel/menara-pandang.html" class="btn btn-primary">Baca Selengkapnya</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- DESTINASI UNGGULAN SECTION -->
-        <section class="destinations-section" id="destinasi">
-            <div class="section-header">
-                <span class="section-subtitle">Rekomendasi Utama</span>
-                <h2 class="section-title">Tempat yang Wajib Dikunjungi</h2>
-                <div class="title-divider"></div>
-            </div>
-
-            <div class="destinations-grid">
-                <!-- Card 1: Pasar Terapung -->
-                <div class="destination-card">
-                    <div class="card-image-box">
-                        <img src="image/pasar-terapung.jpg" alt="Aktivitas pedagang di Pasar Terapung Banjarmasin" class="card-img">
-                        <span class="category-badge card-badge">Wisata Sungai</span>
+                    <div class="hero-facts">
+                        <div class="fact-item">
+                            <span class="fact-val">102</span>
+                            <span class="fact-label">Aliran Sungai Aktif</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-val">1526</span>
+                            <span class="fact-label">Tahun Berdiri Kota</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-val">06.00</span>
+                            <span class="fact-label">WITA Pasar Terapung</span>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Pasar Terapung</h3>
-                        <p class="card-excerpt">
-                            Tradisi jual beli di atas sungai menggunakan perahu kelotok yang menjadi gambaran unik kehidupan masyarakat Banjarmasin.
-                        </p>
-                        <a href="artikel/pasar-terapung.html" class="card-link">Lihat Detail &rarr;</a>
+                    <div class="hero-actions">
+                        <a href="#destinasi" class="btn btn-primary">Jelajah Destinasi</a>
+                        <a href="artikel/menara-pandang.html" class="btn btn-outline">Baca Ulasan Menara Pandang</a>
                     </div>
                 </div>
-
-                <!-- Card 2: Susur Sungai -->
-                <div class="destination-card">
-                    <div class="card-image-box">
-                        <img src="image/susur-sungai.jpeg" alt="Perjalanan jukung dan kelotok menyusuri Sungai Martapura" class="card-img">
-                        <span class="category-badge card-badge">Wisata Sungai</span>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Susur Sungai</h3>
-                        <p class="card-excerpt">
-                            Menjelajahi Banjarmasin menggunakan jukung atau kelotok sambil menikmati kehidupan di sepanjang aliran sungai.
-                        </p>
-                        <a href="artikel/susur-sungai.html" class="card-link">Lihat Detail &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Card 3: Soto Banjar -->
-                <div class="destination-card">
-                    <div class="card-image-box">
-                        <img src="image/kuliner-soto-banjar.jpg" alt="Hidangan khas Soto Banjar hangat berbumbu rempah" class="card-img">
-                        <span class="category-badge card-badge">Kuliner</span>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Soto Banjar</h3>
-                        <p class="card-excerpt">
-                            Mengenal cita rasa khas Banjar melalui kuliner populer kaya aroma rempah dan pelengkap hidangan yang menggiurkan.
-                        </p>
-                        <a href="artikel/soto-banjar.html" class="card-link">Lihat Detail &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Card 4: Kampung Sasirangan -->
-                <div class="destination-card">
-                    <div class="card-image-box">
-                        <img src="image/kampung_sasirangan.jpeg" alt="Deretan kain batik tradisional Sasirangan khas Banjar" class="card-img">
-                        <span class="category-badge card-badge">Budaya</span>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Kampung Sasirangan</h3>
-                        <p class="card-excerpt">
-                            Menelusuri pusat kerajinan kain tradisional Sasirangan dan mengenal warisan budaya khas Banjar yang penuh warna.
-                        </p>
-                        <a href="artikel/kampung-sasirangan.html" class="card-link">Lihat Detail &rarr;</a>
+                <div class="hero-visual-frame">
+                    <img src="image/menara-pandang.jpeg"
+                        alt="Pemandangan Menara Pandang Siring Sungai Martapura Banjarmasin" fetchpriority="high">
+                    <div class="hero-visual-caption">
+                        <span class="caption-landmark">Menara Pandang Siring</span>
+                        <span class="caption-tag">Banjarmasin Tengah</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTENT WRAPPER: ARTICLES & SIDEBAR -->
-        <div class="content-wrapper">
-
-            <!-- MAIN ARTICLES SECTION -->
-            <section class="articles-section" id="artikel">
+        <!-- 2. DESTINASI UNGGULAN (VARIANCE 6: Asymmetric Featured Lead + 3 Diverse Columns) -->
+        <section class="destinations-section" id="destinasi" aria-labelledby="destinasi-title">
+            <div class="wrap">
                 <div class="section-header">
-                    <span class="section-subtitle">Portal Berita &amp; Cerita</span>
-                    <h2 class="section-title">Cerita dari Kota Seribu Sungai</h2>
+                    <span class="section-subtitle">Rekomendasi Utama</span>
+                    <h2 id="destinasi-title" class="section-title">Tempat yang Wajib Dikunjungi di Banjarmasin</h2>
                     <div class="title-divider"></div>
                 </div>
 
-                <div class="articles-list">
-                    <!-- Article 1: Menara Pandang -->
-                    <article class="article-card">
-                        <div class="article-image-box">
-                            <img src="image/menara-pandang.jpeg" alt="Menara Pandang Siring Sungai Martapura" class="article-img">
+                <div class="destinations-asymmetric-layout">
+                    <!-- Featured Destination: Pasar Terapung -->
+                    <article class="destination-featured">
+                        <div class="featured-image-box">
+                            <img src="image/pasar-terapung.jpg" alt="Aktivitas pedagang di Pasar Terapung Banjarmasin"
+                                loading="lazy">
                         </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="category-badge text-badge">Landmark Kota</span>
-                                <time datetime="2026-09-16" class="meta-date">16 September 2026</time>
+                        <div class="featured-body">
+                            <div class="featured-meta-top">
+                                <span class="category-badge badge-river">Wisata Tradisi Air</span>
+                                <span class="category-badge badge-warm">Sorotan Utama</span>
                             </div>
-                            <h3 class="article-title">Menara Pandang: Melihat Wajah Banjarmasin dari Ketinggian</h3>
-                            <p class="article-summary">
-                                Menara Pandang menjadi salah satu landmark yang menarik untuk dikunjungi ketika menjelajahi Kota Banjarmasin. Bangunan ini berada di kawasan Siring Sungai Martapura dan menjadi salah satu titik yang memperlihatkan karakter kota dari sudut pandang yang berbeda.
+                            <h3 class="featured-title">Pasar Terapung Lok Baintan &amp; Muara Kuin</h3>
+                            <p class="featured-excerpt">
+                                Tradisi jual beli di atas perahu kelotok dan jukung yang berlangsung turun-temurun sejak
+                                era Kesultanan Banjar. Saksikan langsung pertukaran hasil bumi, sayur mayur, dan kuliner
+                                tradisional di atas permukaan air.
                             </p>
-                            <a href="artikel/menara-pandang.html" class="btn-read-more">Baca Selengkapnya &rarr;</a>
+                            <div class="featured-logistics">
+                                <div class="logistics-row">
+                                    <span class="logistics-label">Waktu Operasional:</span>
+                                    <span>Pukul 06.00–08.00 WITA (Puncak Ramai Subuh)</span>
+                                </div>
+                                <div class="logistics-row">
+                                    <span class="logistics-label">Akses Transportasi:</span>
+                                    <span>Kelotok dari Dermaga Siring Pierre Tendean</span>
+                                </div>
+                            </div>
+                            <a href="artikel/pasar-terapung.html" class="btn btn-primary">Buka Informasi Pasar Terapung
+                                &rarr;</a>
                         </div>
                     </article>
 
-                    <!-- Article 2: Pasar Terapung -->
-                    <article class="article-card">
-                        <div class="article-image-box">
-                            <img src="image/pasar-terapung.jpg" alt="Perahu-perahu pedagang di kawasan Pasar Terapung Banjarmasin" class="article-img">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="category-badge text-badge">Wisata Sungai</span>
-                                <time datetime="2026-09-15" class="meta-date">15 September 2026</time>
+                    <!-- Subgrid: 3 Diverse Columns -->
+                    <div class="destinations-subgrid">
+                        <!-- Card 1: Susur Sungai -->
+                        <div class="destination-card">
+                            <div class="card-image-box">
+                                <img src="image/susur-sungai.jpeg"
+                                    alt="Perjalanan jukung dan kelotok menyusuri Sungai Martapura" loading="lazy">
+                                <span class="category-badge card-badge badge-river">Wisata Sungai</span>
                             </div>
-                            <h3 class="article-title">Pasar Terapung: Tradisi Jual Beli di Atas Sungai</h3>
-                            <p class="article-summary">
-                                Pasar Terapung merupakan salah satu pengalaman wisata yang memperlihatkan hubungan erat masyarakat Banjarmasin dengan sungai. Aktivitas jual beli dilakukan dari atas perahu sehingga menciptakan suasana pasar yang autentik.
-                            </p>
-                            <a href="artikel/pasar-terapung.html" class="btn-read-more">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </article>
-
-                    <!-- Article 3: Susur Sungai -->
-                    <article class="article-card">
-                        <div class="article-image-box">
-                            <img src="image/susur-sungai.jpeg" alt="Aktivitas wisata susur sungai menggunakan kelotok" class="article-img">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="category-badge text-badge">Wisata Sungai</span>
-                                <time datetime="2026-09-14" class="meta-date">14 September 2026</time>
+                            <div class="card-body">
+                                <h3 class="card-title">Susur Sungai Martapura</h3>
+                                <p class="card-excerpt">
+                                    Menikmati panorama permukiman panggung tepi air dan aktivitas harian warga lokal
+                                    menggunakan transportasi kelotok kayu.
+                                </p>
+                                <a href="artikel/susur-sungai.html" class="card-link">Lihat Detail Rute &rarr;</a>
                             </div>
-                            <h3 class="article-title">Menjelajahi Banjarmasin dari Atas Sungai</h3>
-                            <p class="article-summary">
-                                Menyusuri sungai menjadi salah satu cara paling berkesan untuk menikmati suasana Banjarmasin. Dengan menggunakan jukung atau kelotok, pengunjung dapat melihat kawasan kota dari sisi yang berbeda sekaligus merasakan suasana sungai secara langsung.
-                            </p>
-                            <a href="artikel/susur-sungai.html" class="btn-read-more">Baca Selengkapnya &rarr;</a>
                         </div>
-                    </article>
 
-                    <!-- Article 4: Soto Banjar -->
-                    <article class="article-card">
-                        <div class="article-image-box">
-                            <img src="image/kuliner-soto-banjar.jpg" alt="Mangkuk Soto Banjar lezat khas olahan rempah lokal" class="article-img">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="category-badge text-badge">Kuliner</span>
-                                <time datetime="2026-09-12" class="meta-date">12 September 2026</time>
+                        <!-- Card 2: Soto Banjar -->
+                        <div class="destination-card">
+                            <div class="card-image-box">
+                                <img src="image/kuliner-soto-banjar.jpg"
+                                    alt="Hidangan khas Soto Banjar hangat berbumbu rempah" loading="lazy">
+                                <span class="category-badge card-badge badge-warm">Kuliner Khas</span>
                             </div>
-                            <h3 class="article-title">Soto Banjar: Cita Rasa Khas yang Menggoda</h3>
-                            <p class="article-summary">
-                                Perjalanan wisata tidak lengkap tanpa mencicipi makanan khas daerah yang dikunjungi. Di Banjarmasin, Soto Banjar menjadi salah satu kuliner yang menarik untuk dikenalkan kepada wisatawan karena memiliki cita rasa yang khas.
-                            </p>
-                            <a href="artikel/soto-banjar.html" class="btn-read-more">Baca Selengkapnya &rarr;</a>
-                        </div>
-                    </article>
-
-                    <!-- Article 5: Kampung Sasirangan -->
-                    <article class="article-card">
-                        <div class="article-image-box">
-                            <img src="image/kampung_sasirangan.jpeg" alt="Proses dan keindahan motif kain Sasirangan di Kampung Sasirangan" class="article-img">
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                <span class="category-badge text-badge">Budaya</span>
-                                <time datetime="2026-09-10" class="meta-date">10 September 2026</time>
+                            <div class="card-body">
+                                <h3 class="card-title">Soto Banjar Rempah</h3>
+                                <p class="card-excerpt">
+                                    Kuah bening harum kayu manis, cengkeh, dan kapulaga berpadu suwiran ayam kampung
+                                    serta telur bebek rebus khas tanah Banjar.
+                                </p>
+                                <a href="artikel/soto-banjar.html" class="card-link">Lihat Rekomendasi Kuliner
+                                    &rarr;</a>
                             </div>
-                            <h3 class="article-title">Kampung Sasirangan: Warna Tradisi Banjar</h3>
-                            <p class="article-summary">
-                                Kampung Sasirangan menjadi salah satu tempat yang dapat digunakan untuk mengenal kerajinan dan budaya khas Banjar. Kawasan ini berkaitan dengan Sasirangan, kain tradisional yang memiliki beragam warna dan motif.
-                            </p>
-                            <a href="artikel/kampung-sasirangan.html" class="btn-read-more">Baca Selengkapnya &rarr;</a>
                         </div>
-                    </article>
-                </div>
-            </section>
 
-            <!-- ASIDE / SIDEBAR -->
-            <aside class="sidebar">
-                <div class="sidebar-widget">
-                    <h2 class="widget-title">Destinasi Sekitar</h2>
-                    <div class="widget-divider"></div>
-                    
-                    <div class="aside-card">
-                        <div class="aside-image-box">
-                            <img src="image/Pulau-Kembang.jpg" alt="Habitat alami fauna dan keindahan pulau di tengah Sungai Barito Pulau Kembang" class="aside-img">
-                            <span class="category-badge aside-badge">Destinasi Alam</span>
-                        </div>
-                        <div class="aside-body">
-                            <h3 class="aside-card-title">Pulau Kembang</h3>
-                            <p class="aside-description">
-                                Destinasi wisata alam di kawasan Sungai Barito yang menawarkan suasana alami dan menjadi tempat habitat berbagai satwa. Pelengkap sempurna perjalanan menjelajahi sekitar kota Banjarmasin.
-                            </p>
-                            <a href="artikel/pulau-kembang.html" class="btn btn-outline">Lihat Informasi Detail &rarr;</a>
+                        <!-- Card 3: Kampung Sasirangan -->
+                        <div class="destination-card">
+                            <div class="card-image-box">
+                                <img src="image/kampung_sasirangan.jpeg"
+                                    alt="Deretan kain batik tradisional Sasirangan khas Banjar" loading="lazy">
+                                <span class="category-badge card-badge">Wastra &amp; Budaya</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Sentra Kampung Sasirangan</h3>
+                                <p class="card-excerpt">
+                                    Menyusuri lorong perajin kain tradisional Sasirangan di Seberang Mesjid dengan
+                                    teknik jelujur dan pewarnaan alami.
+                                </p>
+                                <a href="artikel/kampung-sasirangan.html" class="card-link">Lihat Sentra Budaya
+                                    &rarr;</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="sidebar-widget info-widget">
-                    <h2 class="widget-title">Tips Wisatawan</h2>
-                    <div class="widget-divider"></div>
-                    <ul class="tips-list">
-                        <li><strong>Waktu Terbaik:</strong> Kunjungi Pasar Terapung pukul 06.00–08.00 WITA.</li>
-                        <li><strong>Transportasi:</strong> Sewa kelotok lokal untuk menyusuri suguhan pemandangan sungai.</li>
-                        <li><strong>Souvenir:</strong> Dapatkan kain Sasirangan otentik langsung dari perajin lokal.</li>
-                    </ul>
-                </div>
-            </aside>
-
-        </div>
-
-        <!-- ABOUT SECTION -->
-        <section class="about-section" id="tentang">
-            <div class="about-container">
-                <span class="section-subtitle">Tentang Kami</span>
-                <h2 class="section-title">Tentang Jelajah Banjarmasin</h2>
-                <div class="title-divider"></div>
-                <p class="about-description">
-                    <strong>Jelajah Banjarmasin</strong> merupakan portal informasi wisata dengan gaya <em>travel editorial</em> yang didedikasikan untuk mengenalkan daya tarik, kekayaan sungai, seni budaya, serta ragam kuliner khas Kota Seribu Sungai kepada masyarakat luas dan wisatawan internasional.
+        <!-- 3. DEALT STATEMENT MOMENT (word-highlight) -->
+        <section class="statement-moment" id="filosofi" data-moment="word-highlight"
+            aria-label="Filosofi Sungai Banjarmasin">
+            <div class="wrap">
+                <span class="statement-label">Filosofi Seribu Sungai</span>
+                <p class="mo-wh__text">
+                    Bagi masyarakat Banjar, sungai adalah ruang hidup utama tempat pasar perahu, wastra sasirangan, dan
+                    rempah soto menyatu dalam harmoni <strong>kebudayaan air</strong> yang mengalir sejak lima abad
+                    silam.
                 </p>
+            </div>
+        </section>
+
+        <!-- 4. ARTIKEL & COMPANION RAIL (VARIANCE 6 & DENSITY 4) -->
+        <section class="articles-section" id="artikel" aria-labelledby="artikel-title">
+            <div class="wrap">
+                <div class="section-header">
+                    <span class="section-subtitle">Portal Berita &amp; Cerita</span>
+                    <h2 id="artikel-title" class="section-title">Cerita dari Kota Seribu Sungai</h2>
+                    <div class="title-divider"></div>
+                </div>
+
+                <div class="content-wrapper">
+                    <!-- Left Column: Editorial Articles Stream -->
+                    <div class="articles-stream">
+                        <!-- Featured Article Card: Menara Pandang -->
+                        <article class="article-card-featured">
+                            <div class="lead-image-box">
+                                <img src="image/menara-pandang.jpeg" alt="Menara Pandang Siring Sungai Martapura"
+                                    loading="lazy">
+                            </div>
+                            <div class="lead-content">
+                                <div class="article-meta">
+                                    <span class="category-badge badge-river">Landmark Kota</span>
+                                    <time datetime="2026-09-16" class="meta-date">16 September 2026</time>
+                                    <span>• 4 Menit Baca</span>
+                                </div>
+                                <h3 class="article-title">Menara Pandang: Melihat Wajah Banjarmasin dari Ketinggian</h3>
+                                <p class="article-summary">
+                                    Menara Pandang menjadi salah satu landmark yang menarik untuk dikunjungi ketika
+                                    menjelajahi Kota Banjarmasin. Bangunan ini berada di kawasan Siring Sungai Martapura
+                                    dan menjadi salah satu titik yang memperlihatkan karakter kota dari sudut pandang
+                                    yang berbeda.
+                                </p>
+                                <a href="artikel/menara-pandang.html" class="btn-read-more">Baca Ulasan Selengkapnya
+                                    &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Compact Editorial Rows (Articles 2–5) -->
+                        <div class="compact-articles-list">
+                            <!-- Article 2: Pasar Terapung -->
+                            <article class="article-card-compact">
+                                <div class="compact-image-box">
+                                    <img src="image/pasar-terapung.jpg"
+                                        alt="Perahu-perahu pedagang di kawasan Pasar Terapung Banjarmasin"
+                                        loading="lazy">
+                                </div>
+                                <div class="compact-content">
+                                    <div class="article-meta">
+                                        <span class="category-badge badge-river">Wisata Sungai</span>
+                                        <time datetime="2026-09-15" class="meta-date">15 September 2026</time>
+                                    </div>
+                                    <h3 class="compact-title">
+                                        <a href="artikel/pasar-terapung.html">Pasar Terapung: Tradisi Jual Beli di Atas
+                                            Sungai</a>
+                                    </h3>
+                                    <a href="artikel/pasar-terapung.html" class="btn-read-more">Baca Selengkapnya
+                                        &rarr;</a>
+                                </div>
+                            </article>
+
+                            <!-- Article 3: Susur Sungai -->
+                            <article class="article-card-compact">
+                                <div class="compact-image-box">
+                                    <img src="image/susur-sungai.jpeg"
+                                        alt="Aktivitas wisata susur sungai menggunakan kelotok" loading="lazy">
+                                </div>
+                                <div class="compact-content">
+                                    <div class="article-meta">
+                                        <span class="category-badge badge-river">Wisata Sungai</span>
+                                        <time datetime="2026-09-14" class="meta-date">14 September 2026</time>
+                                    </div>
+                                    <h3 class="compact-title">
+                                        <a href="artikel/susur-sungai.html">Menjelajahi Banjarmasin dari Atas Sungai</a>
+                                    </h3>
+                                    <a href="artikel/susur-sungai.html" class="btn-read-more">Baca Selengkapnya
+                                        &rarr;</a>
+                                </div>
+                            </article>
+
+                            <!-- Article 4: Soto Banjar -->
+                            <article class="article-card-compact">
+                                <div class="compact-image-box">
+                                    <img src="image/kuliner-soto-banjar.jpg"
+                                        alt="Mangkuk Soto Banjar lezat khas olahan rempah lokal" loading="lazy">
+                                </div>
+                                <div class="compact-content">
+                                    <div class="article-meta">
+                                        <span class="category-badge badge-warm">Kuliner Khas</span>
+                                        <time datetime="2026-09-12" class="meta-date">12 September 2026</time>
+                                    </div>
+                                    <h3 class="compact-title">
+                                        <a href="artikel/soto-banjar.html">Soto Banjar: Cita Rasa Khas yang Menggoda</a>
+                                    </h3>
+                                    <a href="artikel/soto-banjar.html" class="btn-read-more">Baca Selengkapnya
+                                        &rarr;</a>
+                                </div>
+                            </article>
+
+                            <!-- Article 5: Kampung Sasirangan -->
+                            <article class="article-card-compact">
+                                <div class="compact-image-box">
+                                    <img src="image/kampung_sasirangan.jpeg"
+                                        alt="Proses dan keindahan motif kain Sasirangan di Kampung Sasirangan"
+                                        loading="lazy">
+                                </div>
+                                <div class="compact-content">
+                                    <div class="article-meta">
+                                        <span class="category-badge">Wastra &amp; Budaya</span>
+                                        <time datetime="2026-09-10" class="meta-date">10 September 2026</time>
+                                    </div>
+                                    <h3 class="compact-title">
+                                        <a href="artikel/kampung-sasirangan.html">Kampung Sasirangan: Warna Tradisi
+                                            Banjar</a>
+                                    </h3>
+                                    <a href="artikel/kampung-sasirangan.html" class="btn-read-more">Baca Selengkapnya
+                                        &rarr;</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Sidebar / Travel Companion Rail -->
+                    <aside class="sidebar">
+                        <!-- Widget 1: Destinasi Sekitar: Pulau Kembang -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Destinasi Sekitar</h3>
+                            <div class="widget-divider"></div>
+                            <div class="aside-card">
+                                <div class="aside-image-box">
+                                    <img src="image/Pulau-Kembang.jpg"
+                                        alt="Habitat alami fauna dan keindahan pulau di tengah Sungai Barito Pulau Kembang"
+                                        loading="lazy">
+                                    <span class="category-badge aside-badge badge-river">Destinasi Alam</span>
+                                </div>
+                                <h4 class="aside-card-title">Pulau Kembang di Muara Barito</h4>
+                                <p class="aside-description">
+                                    Cagar alam di tengah aliran Sungai Barito yang dihuni kawanan kera ekor panjang dan
+                                    bekantan liar di rimbun hutan bakau rawa.
+                                </p>
+                                <a href="artikel/pulau-kembang.html" class="btn btn-outline">Lihat Informasi Detail
+                                    &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Widget 2: Maskot Kebanggaan: Patung Bekantan -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Maskot Kota</h3>
+                            <div class="widget-divider"></div>
+                            <div class="mascot-card">
+                                <div class="mascot-image-box">
+                                    <img src="image/Patung_Bekantan_Banjarmasin.JPG"
+                                        alt="Patung Bekantan ikonik di tepi Siring Sungai Martapura" loading="lazy">
+                                </div>
+                                <h4 class="aside-card-title">Patung Bekantan Siring</h4>
+                                <p class="aside-description">
+                                    Monumen ikonik setinggi 6,5 meter di tepi Siring Pierre Tendean yang menyemburkan
+                                    air ke Sungai Martapura sebagai simbol satwa endemik Kalimantan Selatan.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Widget 3: Panduan Logistik & Jam Operasional -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Panduan Lapangan</h3>
+                            <div class="widget-divider"></div>
+                            <ul class="tips-list">
+                                <li>
+                                    <strong>Waktu Terbaik:</strong> Kunjungi Pasar Terapung pukul 06.00–08.00 WITA saat
+                                    aktivitas jukung paling semarak.
+                                </li>
+                                <li>
+                                    <strong>Sewa Kelotok:</strong> Dermaga Siring Pierre Tendean melayani rute susur
+                                    sungai dan carter kelotok wisata.
+                                </li>
+                                <li>
+                                    <strong>Sentra Belanja:</strong> Beli kain Sasirangan otentik langsung dari workshop
+                                    perajin di Seberang Mesjid.
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. TENTANG SECTION (With Authentic Visual & CTA Button) -->
+        <section class="about-section" id="tentang" aria-labelledby="tentang-title">
+            <div class="wrap about-grid">
+                <div class="about-content">
+                    <span class="section-subtitle">Tentang Kami</span>
+                    <h2 id="tentang-title" class="section-title">Tentang Jelajah Banjarmasin</h2>
+                    <div class="title-divider"></div>
+                    <p class="about-description">
+                        <strong>Jelajah Banjarmasin</strong> merupakan portal informasi wisata dengan gaya <em>travel
+                            editorial</em> yang didedikasikan untuk mengenalkan daya tarik, kekayaan sungai, seni
+                        budaya, serta ragam kuliner khas Kota Seribu Sungai kepada masyarakat luas dan wisatawan
+                        internasional.
+                    </p>
+                    <div class="about-pillars">
+                        <div class="pillar-box">
+                            <h3 class="pillar-title">Kurasi Lokal Otentik</h3>
+                            <p class="pillar-text">Menyajikan ulasan langsung dari pengalaman di bantaran sungai dan
+                                sentra budaya Banjar.</p>
+                        </div>
+                        <div class="pillar-box">
+                            <h3 class="pillar-title">Panduan Perjalanan Teruji</h3>
+                            <p class="pillar-text">Informasi waktu terbaik, rute kelotok, serta etika berkunjung yang
+                                menghormati warga setempat.</p>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#destinasi" class="btn btn-primary">Mulai Eksplorasi Kota</a>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <img src="image/Patung_Bekantan_Banjarmasin.JPG"
+                        alt="Patung Bekantan di tepi Sungai Martapura Banjarmasin" loading="lazy">
+                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- 6. SITE FOOTER -->
     <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <span class="footer-title">Jelajah Banjarmasin</span>
-                <p class="footer-tagline">Temukan Pesona Kota Seribu Sungai</p>
+        <div class="wrap footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-title">Jelajah Banjarmasin</span>
+                    <p class="footer-tagline">Temukan pesona kebudayaan air, tradisi pasar terapung, dan warisan kuliner
+                        khas Kota Seribu Sungai, Kalimantan Selatan.</p>
+                </div>
+                <div>
+                    <h3 class="footer-col-title">Navigasi Utama</h3>
+                    <ul class="footer-links">
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#destinasi">Destinasi</a></li>
+                        <li><a href="#artikel">Artikel Liputan</a></li>
+                        <li><a href="#tentang">Tentang Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-col-title">Destinasi Pilihan</h3>
+                    <ul class="footer-links">
+                        <li><a href="artikel/menara-pandang.html">Menara Pandang Siring</a></li>
+                        <li><a href="artikel/pasar-terapung.html">Pasar Terapung Lok Baintan</a></li>
+                        <li><a href="artikel/pulau-kembang.html">Cagar Alam Pulau Kembang</a></li>
+                    </ul>
+                </div>
             </div>
-            
-            <nav class="footer-nav" aria-label="Navigasi Footer">
-                <ul class="footer-links">
-                    <li><a href="#beranda">Beranda</a></li>
-                    <li><a href="#destinasi">Destinasi</a></li>
-                    <li><a href="#artikel">Artikel</a></li>
-                    <li><a href="#tentang">Tentang</a></li>
-                    <li><a href="https://www.dicoding.com/users/muhammadzakaria/academies" target="_blank" rel="noopener noreferrer">Profil Dicoding</a></li>
-                </ul>
-            </nav>
-            
             <div class="footer-bottom">
-                <p>&copy; 2026 Jelajah Banjarmasin. Semua Hak Dilindungi.</p>
+                <p class="footer-credits">Dokumentasi foto asli: Koleksi Lapangan Jelajah Banjarmasin &amp; Tim
+                    Ekspedisi Siring.</p>
+                <p class="footer-copy">&copy; 2026 Jelajah Banjarmasin. Semua Hak Dilindungi.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Moments JS Loader -->
+    <script type="module" src="assets/moments/moments.js"></script>
+
 </body>
+
 </html>
